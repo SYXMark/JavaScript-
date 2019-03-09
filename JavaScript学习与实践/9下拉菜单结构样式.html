@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>下拉菜单样式</title>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+		}
+	.nav{
+		width:430px;
+		height:40px;
+		background:skyblue;
+		margin:100px auto;
+		text-align:center;
+		line-height:40px;
+		}
+	a{
+		color:#fff;
+		text-decoration:none;
+		display:block;
+		}
+	.nav li{
+		width:100px;
+		height:40px;
+		background:skyblue;
+		}
+	.nav>li{
+		float:left;
+		margin-right:10px;
+		position:relative;
+		}
+	.nav>li:last-child{
+		margin-right:0;
+		}
+	.nav li ul{
+		position:absolute;
+		left:0;
+		top:40px;
+		display:none;
+		}
+
+</style>
+</head>
+	
+<body>
+	<ul class="nav">
+    	<li>
+        	<a href="javascript:;">首页</a>
+        </li>
+        <li>
+            <a href="javascript:;">UI设计</a>
+            <ul>
+            	<li><a href="javascript:;">界面设计</a></li>
+                <li><a href="javascript:;">界面设计</a></li>
+                <li><a href="javascript:;">界面设计</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="javascript:;">WEB前端</a>
+            <ul>
+            	<li><a href="javascript:;">HTML5</a></li>
+                <li><a href="javascript:;">HTML5</a></li>
+                <li><a href="javascript:;">HTML5</a></li>
+            </ul>
+        </li>
+        <li>
+        	<a href="javascript:;">公开课</a>
+            <ul>
+            	<li><a href="javascript:;">网页设计</a></li>
+                <li><a href="javascript:;">网页设计</a></li>
+                <li><a href="javascript:;">网页设计</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+
+</html>

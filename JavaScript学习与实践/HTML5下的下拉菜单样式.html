@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	/*
+		*表示css中全部的标签
+	*/
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+		}
+	/*
+		.nav(navigation导航)
+	*/
+	.nav{
+		width:430px;
+		height:40px;
+		background:skyblue;
+		margin:100px auto;
+		text-align:center;
+		line-height:40px;
+		}
+		/*
+			a是css的属性，一般配合js使用
+		*/
+	a{
+		color:#fff;
+		text-decoration:none;
+		display:block;
+		}
+	.nav li{
+		width:100px;
+		height:40px;
+		background:skyblue;
+		}
+		/*
+			>是一种选择器，比如nav>ul就是选中所有父类的id的ul元素
+			<div id= "nav">
+			<ul>就是选中这里</ul>
+		*/
+	.nav>li{
+		float:left;
+		margin-right:10px;
+		position:relative;
+		}
+	.nav>li:last-child{
+		margin-right:0;
+		}
+	/*.nav li ul{      
+		position:absolute;
+		left:0;
+		top:40px;
+		display:none;
+		}*/
+
+	.nav li ul{      
+		position:absolute;
+		left:0;
+		top:40px;
+		height:0;
+		overflow:hidden;
+		transition:height 0.5s;
+		}
+</style>
+</head>
+	
+<body>
+	<ul class="nav">
+    	<li>
+        	<a href="javascript:;">首页</a>
+        </li>
+        <li id="Li1">
+            <a href="javascript:;">UI设计</a>
+            <ul id="Ul1">
+            	<li><a href="javascript:;">界面设计</a></li>
+                <li><a href="javascript:;">界面设计</a></li>
+                <li><a href="javascript:;">界面设计</a></li>
+            </ul>
+        </li>
+        <li id="Li2">
+        	<a href="javascript:;">WEB前端</a>
+            <ul id="Ul2">
+            	<li><a href="javascript:;">HTML5</a></li>
+                <li><a href="javascript:;">HTML4</a></li>
+                <li><a href="javascript:;">HTML3</a></li>
+            </ul>
+        </li>
+        <li id="Li3">
+        	<a href="javascript:;">公开课</a>
+            <ul id="Ul3">
+            	<li><a href="javascript:;">网页设计</a></li>
+                <li><a href="javascript:;">网页排版</a></li>
+                <li><a href="javascript:;">网页发布</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <script>
+    	
+		//获取需要用到的标签
+		function nav(liID,ulID){
+			var oLi1 = document.getElementById(liID);
+			var oUl1 = document.getElementById(ulID);
+		
+			oLi1.onmouseover = function (){
+				oUl1.style.height = '120px';
+				}
+			oLi1.onmouseout = function (){
+				oUl1.style.height = '0';
+				}
+			}
+			
+		nav('Li1','Ul1');
+		nav('Li2','Ul2');
+		nav('Li3','Ul3');
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DOM基础-查找元素</title>
+</head>
+<style>
+	#box{width:200dx;height:200dx;background:pink;}
+</style>
+<body>
+	<div id="box">ID盒子</div>
+    <div class="box">CLASS盒子</div>
+    <div>DIV盒子</div>
+	<script>
+    	//查找元素
+		/*
+			id
+			标签名
+			类名
+			
+		*/
+		console.log(document.getElementById('box'));
+		console.log(document.getElementsByTagName('div'));
+		console.log(document.getElementsByClassName('box'));
+    </script>
+</body>
+</html>

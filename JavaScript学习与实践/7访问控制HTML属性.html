@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DOM基础-访问控制HTML属性</title>
+</head>
+<style>
+	.box{
+		height:200px;
+		width:200px;
+		background:pink;
+		border:1px solid #000;
+		}
+</style>
+<body>
+		<input id ="txt" type = "text"><br>
+		<a id = "link" href = "#">超链接</a>
+		<div id = "box"></div>
+	<script>
+    	var oTxt = document.getElementById('txt');
+		var oLink = document.getElementById('link');
+		var oBox = document.getElementById('box');
+		
+		//控制标签的属性：
+		//怎么访问控制：原来怎么写就怎么用，通过点语法来访问
+		//在控制盒子访问class属性时，需要写成className,很多软件它会有提示关键字
+		oTxt.type = 'checkbox';
+		oLink.href = 'http://www.baidu.com';
+		oBox.className = 'box';
+		oBox.innerHTML = '<h2>盒子</h2> <p>一个帅气的盒子</p>';
+				
+		
+		
+    </script>
+</body>
+</html>

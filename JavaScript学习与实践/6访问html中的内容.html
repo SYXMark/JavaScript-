@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>访问html中的内容</title>
+</head>
+
+<body>
+	<div id="box">帅气的盒子</div>
+	<script>
+    	//1.获取需要用到的数据，通过变量存起来
+		
+		var oBox = document.getElementById('box');
+		
+		oBox.style.background = '#ccc';
+		oBox.style.width = '200px';
+		oBox.style.height = '200px';
+		
+		//inerHTML属性：可以更改div中的内容
+		oBox.innerHTML = '<h2>盒子</h2> <p>帅气的盒子</p>'; 
+    </script>
+
+</body>
+</html>
